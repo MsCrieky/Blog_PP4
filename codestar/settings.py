@@ -29,7 +29,6 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
 ALLOWED_HOSTS = [
     '8000-mscrieky-blog-pp4-m567nwhjp7.us2.codeanyapp.com', '.herokuapp.com']
 
@@ -43,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'blog',
 ]
 
