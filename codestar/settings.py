@@ -33,7 +33,6 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-mscrieky-blog-pp4-m567nwhjp7.us2.codeanyapp.com', '.herokuapp.com', '8000-mscrieky-blogpp4-di8f86m8wc4.ws-eu108.gitpod.io']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -96,8 +95,7 @@ DATABASES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeanyapp.com",
-    "https://*.herokuapp.com"
+    "https://8000-mscrieky-blogpp4-di8f86m8wc4.ws-eu108.gitpod.io"
 ]
 
 
