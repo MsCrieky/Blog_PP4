@@ -9,12 +9,13 @@ body {
     color: #4A4A4F;
 }
 
-.blue-c {
-    color: #390fac;
+.orange-c {
+    color: #f1a50f;
 }
 
 .thin {
     font-weight: 300;
+    color: #f1a50f;
 }
 
 .light-bg {

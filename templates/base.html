@@ -1,7 +1,12 @@
-{% load static %} <!DOCTYPE html>
+{% load static %} 
+{% url 'home' as home_url %}
+{% url 'about' as about_url %}
+
+<!DOCTYPE html>
+
 <html class="h-100" lang="en">
   <head>
-    <title>CodeStar Blog</title>
+    <title>SCREEN|FiXed Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google Fonts CSS -->
@@ -39,9 +44,8 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}"
           ><span class="brand"
-            >S<span class="blue-c">C</span>REEN<span class="thin"
-              >|FIX</span></span></a
-        >
+            >S<span class="orange-c">C</span>REEN<span class="thin"
+              >|FiXed</span></span></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,8 +53,7 @@
           data-bs-target="#navbarText"
           aria-controls="navbarText"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
@@ -59,10 +62,17 @@
               <a
                 class="nav-link {% if request.path == home_url %}active{% endif %}"
                 aria-current="page"
-                href="#"
-                >Home</a
-              >
-{% url 'home' %}            </li>
+                href="{% url 'home'%}"
+                >Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link
+                {% if request.path == about_url %}active{%endif%}"
+                aria-current="page"
+                href="{% url 'about' %}"
+                >About</a>
+            </li>
           </ul>
           <span class="navbar-text text-muted">
             In The World Of Screens
