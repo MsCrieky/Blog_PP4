@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-4 text-center">
-            <img src="{% static 'images/marsAttacks.webp' %}" width="90%">
+            <img src="{% static 'images/mars-attacks.jpg' %}" width="90%">
         </div>
         <div class="col-8">
             <h2>{{ about.title }}</h2>
@@ -14,10 +14,10 @@
     </div>
     <div class="row">
         {% if "placeholder" in about.profile_image.url %}
-      <img src="{% static 'images/nobody.jpg' %}" width="75%"
+      <img src="{% static 'images/' %}" width="75%"
         alt="placeholder image" >
       {% else %}
-      <img src="{{ about.profile_image.url }}" width="75%"
+      <img src="{{ about.profile_image.url }}" width="30%"
         alt="{{ about.title }}">
       {% endif %}
         <div class="col text-right">

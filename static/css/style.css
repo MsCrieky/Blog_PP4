@@ -6,16 +6,19 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #002C54;
+    color: #ffffff;
 }
 
+.style-navbar {
+    background-color: #B85042;
+}
 .orange-c {
-    color: #C5001A;
+    color: #FFBB00;
 }
 
 .thin {
     font-weight: 300;
-    color: #060606;
+    color: #ffffff;
 }
 
 .light-bg {
@@ -23,11 +26,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #002C54;
+    background-color: #B85042;
 }
 
 .main-bg {
-    background-color: #FDF6F6;
+    background-color: #ffffff;
 }
 
 .card {
@@ -44,7 +47,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #B85042;
 }
 
 .scale {
