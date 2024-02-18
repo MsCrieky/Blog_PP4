@@ -1,5 +1,6 @@
 body {
     background-color: #FDF6F6;
+    color: #000000;
 }
 
 .brand {
@@ -12,13 +13,27 @@ body {
 .style-navbar {
     background-color: #B85042;
 }
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #FFBB00;
+}
+
+.navbar-text {
+    color: #ffffff;
+}
+
+
 .orange-c {
     color: #FFBB00;
 }
 
 .thin {
     font-weight: 300;
-    color: #ffffff;
+    color: ç;
 }
 
 .light-bg {
@@ -103,7 +118,15 @@ body {
 .post-link:hover,
 .page-link {
     color: #C5001A;
+    
 }
+
+.page-link:hover {
+    color: #FFBB00;
+    background-color: #C5001A;
+}
+
+
 
 .post-title {
     margin-top: 10%;
@@ -115,20 +138,22 @@ body {
     color: lightgray;
 }
 
+
+
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
+    background-color: #FFBB00;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #FFBB00;
 }
 
 .link {
-    color: #23BBBB;
+    color: #FFBB00;
     text-decoration: none;
 }
 

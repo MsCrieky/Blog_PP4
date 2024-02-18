@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'funfacts' as funfacts_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -49,6 +50,10 @@
                         <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
                             href="{% url 'about' %}">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == funfacts_url %}active{%endif%}" aria-current="page"
+                          href="{% url 'funfacts' %}">Funfacts</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
@@ -66,7 +71,7 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text navbar-fanatics">
-                    Screen Fanatics - Look Here
+                    Screen Fanatics - Welcome
                 </span>
             </div>
         </div>
