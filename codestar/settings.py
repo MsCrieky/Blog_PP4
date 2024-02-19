@@ -4,6 +4,7 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,7 +15,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = [
     '8000-mscrieky-blog-pp4-m567nwhjp7.us2.codeanyapp.com', '.herokuapp.com', '8000-mscrieky-blogpp4-yjwkyw59j6p.ws-eu108.gitpod.io']
 
@@ -47,13 +48,14 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
-
 #Add cloudinary config to ensure https instead of http
 cloudinary.config(
     secure=True,
 )
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
