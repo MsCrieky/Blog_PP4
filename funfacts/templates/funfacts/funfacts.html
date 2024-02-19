@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% load rating_tags %}
+
 
 <!-- index.html content starts here -->
 
@@ -19,16 +21,13 @@
                                 <img class="card-img-top" src="{% static 'images/film-reel.jpg' %}" alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src="{{ funfacts.featured_image.url }}" alt="{{ funfacts.title }}">
-                                {% endif %}
-                                
+                                {% endif %} 
                             </div>
                             <a href="{% url 'funfacts' %}" class="post-link">
                                 <h2 class="funfacts-title">{{ funfacts.title }}</h2>
                             </a>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    {{ funfacts.content | safe }}
-                                </p>
+                            <div class="funfacts-card-body">
+                                <p class="card-text">{{ funfacts.content | safe }}</p>
                                 <hr>
                             </div>
                         </div>

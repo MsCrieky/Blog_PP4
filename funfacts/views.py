@@ -31,7 +31,7 @@ def fun_facts(request, slug):
     return render(request, "funfacts/funfacts.html",
         {
             "post": post,
-            
+            "rating": rating,
         },
     )
     

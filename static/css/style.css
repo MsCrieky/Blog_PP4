@@ -18,7 +18,8 @@ body {
     color: #ffffff;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: #FFBB00;
 }
 
@@ -118,12 +119,15 @@ body {
 .post-link:hover,
 .page-link {
     color: #C5001A;
-    
 }
 
 .page-link:hover {
     color: #FFBB00;
     background-color: #C5001A;
+}
+
+.page-link:focus {
+    color: #ffffff;
 }
 
 
