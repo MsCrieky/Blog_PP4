@@ -188,3 +188,8 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+.funfacts-title {
+    font-size: 20px;
+    text-align: center;
+}
