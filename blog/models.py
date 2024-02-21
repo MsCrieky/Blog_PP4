@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -46,3 +49,18 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+
+class AddPost(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    featured_image = CloudinaryField('image', default='placeholder')
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title + ' | ' + str(self.author)
+
+    def get_absolute_url(self):
+        return HttpResponseRedirect(reverse('home'))

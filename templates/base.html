@@ -1,5 +1,4 @@
 {% load static %}
-
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'funfacts' as funfacts_url %}
@@ -7,13 +6,12 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
-
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-
 <head>
+    <meta name="description" content="Movie blog, come read the latest reviews, funfacts and more">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Screen|Fixed</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,7 +23,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        integrity="" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -33,13 +31,12 @@
 
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg style-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top style-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
             <span class="brand">S</span><span class="orange-c">C</span><span class="brand">REEN</span><span class="thin orange-c">|</span><span class="brand">Fi</span><span class="orange-c">X</span><span class="brand">ed</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="fa-sharp fa-solid fa-bars" style="color: #ffffff;"></i></span>
-        </button>
+            <span><i class="fa-sharp fa-solid fa-bars" style="color: #ffffff;"></i></span></button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -99,7 +96,6 @@
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
-
     </main>
 
     <!-- Footer -->
@@ -116,13 +112,11 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-            </script>
+            integrity="" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9c04d80bd7.js" crossorigin="anonymous"></script>
-
 
     {% block extras %}
     {% endblock %}
 </body>
-
 </html>
+

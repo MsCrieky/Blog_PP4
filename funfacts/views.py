@@ -5,18 +5,18 @@ from .models import Funfacts
 
 class FunfactsList(generic.ListView):
     """
-    Returns all published posts in :model:`blog.Post`
+    Returns all published posts in :model:`funfacts.Funfacts`
     and displays them in a page of three posts. 
     **Context**
 
     ``queryset``
-        All published instances of :model:`blog.Post`
+        All published instances of :model:`funfacts.Funfacts`
     ``paginate_by``
         Number of posts per page.
         
     **Template:**
 
-    :template:`blog/index.html`
+    :template:`funfacts/funfacts.html`
     """
     queryset = Funfacts.objects.all()
     template_name = "funfacts/funfacts.html"

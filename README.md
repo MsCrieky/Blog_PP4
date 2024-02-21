@@ -86,7 +86,7 @@ Indulge in a cinematic oasis with our elegantly designed movie blog. Immerse you
 
 The 'Roboto' font is specified as the primary font, and the 'SansSerif' font is specified as a fallback font.
 
-### Wireframes
+### Wireframes desktop / mobile view
 
 <details>
 <summary> Home Page
@@ -137,3 +137,262 @@ The 'Roboto' font is specified as the primary font, and the 'SansSerif' font is 
 ![Blog Page Logged in User](documentation/wireframes/desktop-mobile-view-loggedin-posts.png)
 </details>
 
+
+## Database Scheme
+
+### Entity Relationship Diagram (ERD)
+<details>
+<summary> ERD Blog
+</summary>
+
+![ERD Blog](documentation/readme_images/erd-blog.png)
+</details>
+
+Each box represents a table/entity in the database.
+The fields within each box represent the columns/attributes of the corresponding table/entity.
+Arrows represent relationships between tables/entities.
+Foreign key relationships are indicated by lines connecting the primary key of one table/entity to the corresponding field in another table/entity.
+
+<details>
+<summary> ERD About
+</summary>
+
+![ERD About](documentation/readme_images/erd-about.png)
+</details>
+
+The About model has its own table/entity in the database.
+The fields within the About model represent the columns/attributes of the About table/entity.
+There are no relationships with other models specified in the provided About model, so no arrows are shown.
+
+<details>
+<summary> ERD Funfacts
+</summary>
+
+![ERD Funfacts](documentation/readme_images/erd-funfacts.png)
+</details>
+
+The Funfacts model has its own table/entity in the database.
+The fields within the Funfacts model represent the columns/attributes of the Funfacts table/entity.
+There are no relationships with other models specified in the provided Funfacts model, so no arrows are shown.
+
+
+## Security Features
+
+### User Authentication
+Screen|Fixed uses Django Allauth authentication and authorization library, which provides a set of features for managing user authentication, registration, and account management.
+
+### CSRF Protection
+Django provides built-in protection against Cross-Site Request Forgery (CSRF) attacks. CSRF tokens are generated for each user session, and they are required to submit forms or perform state-changing actions. When a user logs out, the session and associated CSRF token are invalidated, making it difficult for an attacker to forge a valid request using a copied URL.
+
+## Features
+
+### User Registration and Login System
+Enable users to create accounts and log in to access their profiles.
+Users can post comments, interact with the community, and personalize their experience.
+
+### Blog Post Editor
+Empower users to create and publish blog posts discussing movies and series.
+The editor offers intuitive formatting options, image and link insertion, and draft saving capabilities.
+
+### Comment Moderation System
+Provide the blog owner with tools to moderate comments effectively.
+Approve or remove comments as necessary to maintain a respectful and engaging community.
+
+### Funfacts Page
+Explore a dedicated funfacts page filled with intriguing trivia about movies and series.
+Delve into behind-the-scenes stories, little-known facts, and captivating tidbits that enhance the cinematic experience.
+
+<details>
+<summary> Home Page
+</summary>
+
+![Home Page](documentation/readme_images/home-page.png)
+</details>
+
+<details>
+<summary> About page
+</summary>
+
+![About Page](documentation/readme_images/about-page.png)
+</details>
+
+<details>
+<summary> Funfacts Page
+</summary>
+
+![Funfacts Page](documentation/readme_images/funfacts-page.png)
+</details>
+
+<details>
+<summary> Log In Page
+</summary>
+
+![Log in Page](documentation/readme_images/login-page.png)
+</details>
+
+<details>
+<summary> Register Page
+</summary>
+
+![Register Page](documentation/readme_images/register-page.png)
+</details>
+
+### Features Left to Implement
+* StarRating system
+* Full text Searchbar
+
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Databases Used
+
+* [ElephantSQL](https://www.elephantsql.com/) - Postgres database
+* [Cloudinary](https://cloudinary.com/) - Online static file storage
+
+### Frameworks Used
+
+* [Django](https://www.djangoproject.com/) - Python framework
+* [Bootstrap 4.6.1](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - CSS framework
+
+### Programs Used
+
+* [Github](https://github.com/) - Storing the code online
+* [Gitpod](https://www.gitpod.io/) - To write the code.
+* [Heroku](https://www.heroku.com/) - Used as the cloud-based platform to deploy the site.
+* [Google Fonts](https://fonts.google.com/) - Import main font the website.
+* [Figma](https://www.figma.com/) - Used to create wireframes and schemes
+* [Am I Responsive](https://ui.dev/amiresponsive) - To show the website image on a range of devices.
+* [Git](https://git-scm.com/) - Version control
+* [Favicon Generator](https://favicon.io/) - Used to create a favicon
+* [JSHint](https://jshint.com/) - Used to validate JavaScript
+* [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate HTML
+* [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
+* [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
+
+
+## Deployment
+## App Deployment
+For deploying Your app, Heroku is used. Follow these steps:
+
+Create a New App:
+- Create a new app on Heroku dashboard.
+
+Configure Settings:
+- Navigate to "Settings" in new app.
+
+Config Vars Setup:
+- In "Config Vars," add PORT as the key and 8000 as its value.
+
+Add PostgreSQL Database:
+- Choose PostgreSQL as database.
+
+Example "ElephantSQL" was used in this project
+
+Configure DATABASE_URL:
+- In "Config Vars," add DATABASE_URL and copy the URL from PostgreSQL dashboard.
+
+Note: If using ElephantSQL as PostgreSQL provider, you can use the URL provided by ElephantSQL.
+
+Environment Variable Setup:
+- Create a new file in workspace called env.py.
+- Import the os library and set the environment variable for DATABASE_URL to the Heroku address (or ElephantSQL URL)
+- Add a secret key using os.environ["SECRET_KEY"] = "your secret key here".
+
+Heroku Config Vars:
+- Add the secret key to the Heroku app's config vars in the settings.
+
+Django Settings:
+- In settings.py of Django app, import Path from pathlib, os, and dj_database_url.
+- Add if os.path.isfile("env.py"): import env to the file.
+- Replace the SECRET_KEY with SECRET_KEY = os.environ.get('SECRET_KEY').
+- Replace the database section with DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}.
+
+Migrate Models:
+- In workspace terminal, migrate the models to the new database connection.
+
+Cloudinary
+
+To integrate Cloudinary into project, follow these steps:
+
+Cloudinary Account:
+- Log in to Cloudinary account or create one.
+
+Copy CLOUDINARY_URL:
+
+Environment Variable Setup:
+
+In env.py, add os.environ["CLOUDINARY_URL"] = "add cloudinary_url here".
+
+Heroku Config Vars:
+- In Heroku settings, add CLOUDINARY_URL to config vars.
+
+Django Settings:
+- In INSTALLED_APPS, add cloudinary_storage, Django.contrib.staticfiles, and cloudinary in this order.
+- Configure static file settings in settings.py: URL, storage path, directory path, root path, media URL, and default file storage.
+- Templates Directory Link:
+
+Link the file to the templates directory in Heroku with TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates').
+
+Change Templates Directory:
+- Change the templates directory to TEMPLATES_DIR - 'DIRS': [TEMPLATES_DIR].
+
+Additional Folders:
+- Create three new folders: media, static, and templates.
+
+Procfile Creation:
+
+Create a Procfile.
+- Add the following line inside the Procfile: web: gunicorn project_name_here.wsgi.
+- Push Changes: - Push all changes to GitHub.
+
+Manual Deployment: - In the Heroku deployment tab, deploy to Heroku manually the first time and closely monitor the process. - Once successful, set up automatic deployments.
+
+Version Control
+-  To manage version control and push code to the main repository on GitHub using GitPod, follow these steps:
+
+Add Changes:
+- In the GitPod terminal, use the command git add . to stage changes.
+
+Commit Changes:
+- Commit changes with a descriptive comment using the command:
+- git commit -m "Push comment here"
+
+Push to GitHub:
+- Push the updates to the repository on GitHub with the command:
+- git push
+
+Migrate Models: - In the terminal, migrate the models to the new database connection.
+
+#### How to Fork
+1. Log in(or Sign Up) to Github
+2. Go to repository for this project [Screen|Fixed](https://github.com/MsCrieky/Blog_PP4)
+3. Click the fork button in the top right corner
+
+#### How to Clone
+1. Log in(or Sign Up) to Github
+2. Go to repository for this project [Screen|Fixed](hhttps://github.com/MsCrieky/Blog_PP4)
+3. Click on the code button, chose whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the visable link.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above)
+6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
+7. Install the packages from the requirements.txt file - run Command pip3 install -r requirements.txt
+
+
+## References
+### Docs
+
+* [Stack Overflow](https://stackoverflow.com/)
+* [Code Institute](https://learn.codeinstitute.net/dashboard)
+* [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* [Django docs](https://docs.djangoproject.com/en/4.2/releases/3.2/)
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
+* [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
+* [Cloudinary](https://cloudinary.com/documentation/diagnosing_error_codes_tutorial)
+* [Google](https://www.google.com/)
