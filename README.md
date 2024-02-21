@@ -1,39 +1,139 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Screen|Fixed
+![Visit live site here:](https://)
 
-Welcome,
+Welcome to Screen|Fixed: Your Informative Guide Through the World of Film and Television
+Dive into Screen Fixed, your gateway to exploring the captivating world of movies and television shows. Whether you're a seasoned cinephile or a curious newcomer, this blog offers an insightful and informative haven to delve deeper into your favorite stories and discover hidden gems.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## USER EXPERIENCE (UX)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Immerse yourself in the enchanting world of everything on screen at Screen|Fixed, where every visit promises a seamless and captivating user experience. Explore the latest movie reviews, fascinating TV-series discussions, and intriguing fun facts with ease. Our blog features intuitive navigation, visually stunning content, and a hassle-free exploration of all things movies. Whether you're a seasoned cinephile or just starting your cinematic journey, Screen|Fiexed invites you to indulge in the magic of cinema and tv-series like never before.
 
-## Codeanywhere Reminders
+### PROJECT GOAL
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+This will be a blog about the best new coming movies and series on streaming sites like Netflix, Disney + etc. Its purpose is to make it easier to find what is popular based on category, genre and views. This will make it easier for anyone who wants to find something good to watch in the wast jungle of choices out there.
 
-`python3 -m http.server`
+### Agile Methodology
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+We utilized the Agile Methodology to effectively prioritize and organize tasks, including the creation of user stories and the utilization of Project Boards on GitHub. Additionally, a template was developed to streamline the process of crafting user stories.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+* We drafted epics containing potential user stories, serving as the foundation for developing the website.
+* User stories were derived from the epics and refined through iterative processes, driving the project forward.
+* The Project Board is publicly accessible, providing transparency and insight into the project's progress.
+* Utilizing the Project Board, tasks were tracked as they moved through the stages of Todo, In Progress, and Done.
+* Labels were incorporated to categorize issues based on their level of importance, aiding in prioritization and organization.
 
-`http_server`
+<details>
+<summary> User Stories Template
+</summary>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![User Stories Template](documentation/readme_images/user-stories-template.png)
+</details>
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+<details>
+<summary> User Stories - Issues
+</summary>
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![User Stories Template](documentation/readme_images/user-stories-issues.png)
+</details>
 
-To log into the Heroku toolbelt CLI:
+<details>
+<summary> Project Board
+</summary>
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![User Stories Template](documentation/readme_images/user-stories-project-board.png)
+</details>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
----
+### User Stories
 
-Happy coding!
+For user stories and acceptance criteria, please access here:
+[project board](https://github.com/users/MsCrieky/projects/5/views/1)
+
+### Target Audience
+
+* People who love to watch movies and series
+* Movie buffs and cinephiles
+* People who are looking for recommendations for new movies to watch
+* People who are interested in learning more about the film industry
+
+### For first-time visitors
+
+* Enjoy simple and intuitive website navigation, making exploration and discovery effortless.
+* Immerse yourself in engaging visuals that highlight the beauty of our movie blog and its cinematic wonders.
+* Fill out user-friendly forms with clear validation messages, ensuring accurate input and smooth interactions.
+* Experience an easy registration process, welcoming you to our movie community with ease.
+
+### For registered users
+
+* Experience a seamless login process with a secure and personalized user account, ensuring easy access to all features.
+* Browse available movies with ease, exploring a wide range of cinematic options.
+* Enjoy access to a personalized dashboard showcasing curated posts and fun facts tailored to your interests.
+* Easily modify or delete existing posts for flexibility and convenience, putting you in control of your content.
+
+### For admin users
+
+* Utilize a secure and separate login portal tailored for admin users, ensuring appropriate access control.
+* Access an admin dashboard for efficient management of posts and comments.
+* Enjoy the ability to add, edit, or delete fun facts and modify the about page as needed.
+* Exercise control over user accounts by easily deleting accounts, facilitating efficient management of user data and accounts.
+
+
+## Design
+
+Indulge in a cinematic oasis with our elegantly designed movie blog. Immerse yourself in captivating visuals, seamless navigation, and a curated collection of film delights. Explore, discover, and embrace the magic of cinema in style.
+
+### Typography
+
+The 'Roboto' font is specified as the primary font, and the 'SansSerif' font is specified as a fallback font.
+
+### Wireframes
+
+<details>
+<summary> Home Page
+</summary>
+
+![Home Page](documentation/wireframes/desktop-mobile-view-homepage.png)
+</details>
+
+<details>
+<summary> About Page
+</summary>
+
+![About Page](documentation/wireframes/desktop-mobile-view-about.png)
+</details>
+
+<details>
+<summary> Funfacts Page
+</summary>
+
+![Funfacts Page](documentation/wireframes/desktop-mobile-view-funfacts.png)
+</details>
+
+<details>
+<summary> Sign In/Sign Up Page
+</summary>
+
+![Sign In/Sign Up Page](documentation/wireframes/desktop-mobile-view-signin-signup.png)
+</details>
+
+<details>
+<summary> LogOut Page
+</summary>
+
+![Logout Page](documentation/wireframes/desktop-mobile-view-logout.png)
+</details>
+
+<details>
+<summary> Blog Page Guest
+</summary>
+
+![Blog Page Guest](documentation/wireframes/desktop-mobile-view-guest.png)
+</details>
+
+<details>
+<summary> Blog Page Logged in User
+</summary>
+
+![Blog Page Logged in User](documentation/wireframes/desktop-mobile-view-loggedin-posts.png)
+</details>
+
