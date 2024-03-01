@@ -1,6 +1,6 @@
 body {
-    background-color: #FDF6F6;
-    color: #000000;
+    
+    color: #302b2b;
 }
 
 .brand {
@@ -30,15 +30,19 @@ body {
 
 .orange-c {
     color: #FFBB00;
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 .thin {
+    font-family: Lato, sans-serif;
     font-weight: 300;
-    color: ç;
+    color: #FFBB00;
 }
 
 .light-bg {
-    background-color: #C5001A;
+    background-color: #B85042;
 }
 
 .dark-bg {
@@ -56,6 +60,10 @@ body {
 
 .image-container {
     position: relative;
+}
+
+.blog-style {
+    margin-bottom: 10px;
 }
 
 .image-flash {
@@ -118,19 +126,21 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #C5001A;
+    color: #B85042;
 }
 
 .page-link:hover {
     color: #FFBB00;
-    background-color: #C5001A;
+    background-color: #B85042;
 }
 
 .page-link:focus {
     color: #ffffff;
 }
 
-
+.loggedin-style {
+    margin-top: 45px;
+}
 
 .post-title {
     margin-top: 10%;
@@ -142,8 +152,13 @@ body {
     color: lightgray;
 }
 
+.next-button-style {
+    margin-bottom: 120px;
+}
 
-
+.register-style {
+    margin-bottom: 150px;
+}
 .btn-signup,
 .btn-edit {
     background-color: #FFBB00;
@@ -168,19 +183,19 @@ body {
 }
 
 .btn-like {
-    color: #C5001A;
+    color: #B85042;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #C5001A;
+    background: #B85042;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #C5001A;
+    color: #B85042;
     background: transparent;
     border: none;
 }
@@ -193,7 +208,27 @@ body {
     color: rgb(222, 146, 168);
 }
 
+.funfacts-style {
+    margin-bottom: 60px;
+}
 .funfacts-title {
     font-size: 20px;
     text-align: center;
+}
+
+.comment-style {
+    margin-bottom: 80px;
+}
+
+.footer-style {
+    background-color: #B85042;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-style {
+    padding-bottom: 3px;
+    margin-bottom: 3px;
 }

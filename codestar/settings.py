@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = [
-    '8000-mscrieky-blog-pp4-m567nwhjp7.us2.codeanyapp.com', '.herokuapp.com', '8000-mscrieky-blogpp4-yjwkyw59j6p.ws-eu108.gitpod.io']
+    '8000-mscrieky-blog-pp4-m567nwhjp7.us2.codeanyapp.com', '.herokuapp.com', '8000-mscrieky-blogpp4-yjwkyw59j6p.ws-us108.gitpod.io']
 
 # Application definition
 INSTALLED_APPS = [
@@ -111,7 +111,7 @@ DATABASES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-mscrieky-blogpp4-yjwkyw59j6p.ws-eu108.gitpod.io",
+    "https://8000-mscrieky-blogpp4-yjwkyw59j6p.ws-us108.gitpod.io",
     "https://*.herokuapp.com"
 ]
 
