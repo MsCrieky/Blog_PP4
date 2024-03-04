@@ -176,6 +176,7 @@ body {
 .btn-edit {
     background-color: #ffbb00;
     color: #fff;
+    margin-bottom: 160px;
 }
 
 .btn-signup:hover,
@@ -233,3 +234,10 @@ body {
     margin-bottom: 80px;
 }
 
+.mars-image {
+    width: 100%;
+}
+
+.about.image {
+    width: 30%;
+}
