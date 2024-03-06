@@ -74,6 +74,10 @@ To maintain application security, safeguards such as the |safe filter are implem
 
 ### Unresolved Bug
 
+####
+
+* On the Funfacts page the text size differs on a few posts. I have corrected this in the admin editor but it seems to be living its own life and decides what it want to portray. 
+
 #### Error in signup page
 
 * In the html report I got "Error: End tag p implied, but there were open elements" I looked in the actual signup.html but the error was not from there, it is in a form which I can not find. 
