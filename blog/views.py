@@ -9,14 +9,14 @@ from .forms import CommentForm
 class PostList(generic.ListView):
     """
     Returns all published posts in :model:`blog.Post`
-    and displays them in a page of three posts. 
+    and displays them in a page of three posts.
     **Context**
 
     ``queryset``
         All published instances of :model:`blog.Post`
     ``paginate_by``
         Number of posts per page.
-        
+
     **Template:**
 
     :template:`blog/index.html`
@@ -24,7 +24,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 3
-    
+
 
 def post_detail(request, slug):
     """
@@ -61,15 +61,14 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-    
+
     comment_form = CommentForm()
 
-    return render(request, "blog/post_detail.html",
-        {
-            "post": post,
-            "comments": comments,
-            "comment_count": comment_count,
-            "comment_form": comment_form
+    return render(request, "blog/post_detail.html", {
+        "post": post,
+        "comments": comments,
+        "comment_count": comment_count,
+        "comment_form": comment_form
         },
     )
 
@@ -130,5 +129,3 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-

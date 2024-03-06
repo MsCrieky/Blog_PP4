@@ -396,3 +396,28 @@ Migrate Models: - In the terminal, migrate the models to the new database connec
 * [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
 * [Cloudinary](https://cloudinary.com/documentation/diagnosing_error_codes_tutorial)
 * [Google](https://www.google.com/)
+
+
+## Credits
+
+
+Code
+
+- The README template was helpfully provided by Code Institute (template) as was the main template.
+- Slack has been a good platform for inputs and ideas.
+- ChatGPT has also been a resource for explaining things to me as a newbie.
+
+
+Content
+
+- All the text was written by the developer with a little help from ChatGPT.
+- Images was taken from IMDB 
+- Funfacts information was taken from the page [Facts.net](https://facts.net/) and [Complex.com](https://complex.com/)
+
+## Acknowledgements
+
+
+- Slack community has been a great resource for help and ideas.
+- My mentor Mitko Bachvarov has provided me with good links to helpful websites and gently guided me with good feedback.
+- ChatGPT, thanks for the tuition, laughs and correction of text.
+- Anna, my inspiration and support. Thank you.

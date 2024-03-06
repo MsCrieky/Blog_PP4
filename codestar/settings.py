@@ -1,10 +1,14 @@
 
 from pathlib import Path
 import os
+import sys
+from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
 import cloudinary
+
+development = os.environ.get('DEVELOPMENT')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,7 +19,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = development
 ALLOWED_HOSTS = [
     '8000-mscrieky-blog-pp4-m567nwhjp7.us2.codeanyapp.com', '.herokuapp.com', '8000-mscrieky-blogpp4-yjwkyw59j6p.ws-us108.gitpod.io']
 
@@ -109,6 +113,9 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+if 'test' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-mscrieky-blogpp4-yjwkyw59j6p.ws-us108.gitpod.io",
@@ -148,6 +155,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+MESSAGE_TAGS = {
+    messages.SUCCESS: 'alert-success',
+    messages.ERROR: 'alert-danger',
+}
 
 
 # Static files (CSS, JavaScript, Images)
