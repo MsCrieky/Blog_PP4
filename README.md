@@ -1,5 +1,7 @@
 # Screen|Fixed
-![Visit live site here:](https://)
+![Screen|Fixed](documentation/readme_images/Screenfixed.png)
+
+![Visit live site here:](https://blog-pp4-81f74a941085.herokuapp.com/)
 
 Welcome to Screen|Fixed: Your Informative Guide Through the World of Film and Television
 Dive into Screen Fixed, your gateway to exploring the captivating world of movies and television shows. Whether you're a seasoned cinephile or a curious newcomer, this blog offers an insightful and informative haven to delve deeper into your favorite stories and discover hidden gems.
@@ -268,10 +270,8 @@ Delve into behind-the-scenes stories, little-known facts, and captivating tidbit
 * [Heroku](https://www.heroku.com/) - Used as the cloud-based platform to deploy the site.
 * [Google Fonts](https://fonts.google.com/) - Import main font the website.
 * [Figma](https://www.figma.com/) - Used to create wireframes and schemes
-* [Am I Responsive](https://ui.dev/amiresponsive) - To show the website image on a range of devices.
 * [Git](https://git-scm.com/) - Version control
 * [Favicon Generator](https://favicon.io/) - Used to create a favicon
-* [JSHint](https://jshint.com/) - Used to validate JavaScript
 * [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate HTML
 * [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
 * [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
