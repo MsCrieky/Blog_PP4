@@ -421,3 +421,5 @@ Content
 - My mentor Mitko Bachvarov has provided me with good links to helpful websites and gently guided me with good feedback.
 - ChatGPT, thanks for the tuition, laughs and correction of text.
 - Anna, my inspiration and support. Thank you.
+
+[def]: https://blog-pp4-81f74a941085.herokuapp.com/
